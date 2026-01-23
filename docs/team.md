@@ -6,11 +6,11 @@ title:  Team
 # {{ page.title }}
 
 
-## USER 1
-***UCI Net ID***: ucinetid1
+## Amy Lee
+***UCI Net ID***: leeat5
 
-## USER 2
-***UCI Net ID***: ucinetid2
+## Michelle Lee
+***UCI Net ID***: michel27
 
-## USER 3
-***UCI Net ID***: ucinetid3
+## Rebecca Tio
+***UCI Net ID***: tior
