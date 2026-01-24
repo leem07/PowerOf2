@@ -3,14 +3,14 @@ layout: default
 title: Proposal
 ---
 ## Summary of the Project
-Duckietown is a simulation driven program that navigates a duckiebot through a world, whether physical or purely virtual. Our goal is to train our duckiebot using various RL algorithms in order to determine the best results based on the given task. Our duckiebot will be given the simulated world with these variables and be expected to not veer off course or crash into obstacles/walls.
+Duckietown is a simulation driven program that navigates a duckiebot through a virtual world, though it can also be used on physical hardware. Our goal is to train our duckiebot using various RL algorithms in order to determine the best results based on the given task. Our duckiebot will be given the simulated world with these variables and be expected to not veer off course or crash into obstacles/walls.
 
 ## Project goals
-Minimum goal: we want to use the base level of lane following to get the duckiebot around a track without going off course while not doing extraneous things by timing it. (is that possible duckiebot racetrack using diff algorithms to judge how well they do against each other for eval? but that might be computationally crazy and also not feasible with baselvl duckietown lol?)
+Minimum goal: The duckiebot is able to follow a straight line.
 
-Realistic goal: After accomplishing basic lane following, we want to upgrade our duckiebot to allow the navigation through randomly generated mazes with obstacles to avoid. (q learning?)
+Realistic goal: After accomplishing basic lane following, we want to upgrade our duckiebot to allow the navigation on twisting courses, and not just simple lines.
 
-Moonshot: Improving our model enough to go from simulation to real.
+Moonshot: The duckiebot will be able to navigate through a maze and/or we will be able to implement our simulation on a physical duckiebot.
 
 ## AI/ML algorithms
 We will evaluate how different models do in training the duckiebot against each other with an anticipation of Proximal Policy Approximation due to stability issues that may come with other algorithms, with an additional focus in Q-Learning for maze navigation/obstacle avoidance.
