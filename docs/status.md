@@ -608,7 +608,103 @@ title: Status
       <p>
         The PPO model uses a custom-built environment and training loop with a <strong>CNN + MLP dual-path architecture</strong>. The policy network takes the 4×4 board as input — log2-encoded and passed through both a convolutional spatial path and a flattened MLP path — then outputs a probability distribution over the four possible moves.
       </p>
+      <div class="sub-heading">Algorithm Overview</div>
 
+<p>
+  The agent is trained using <strong>Proximal Policy Optimization (PPO)</strong>, a policy-gradient reinforcement learning algorithm designed to provide stable and sample-efficient updates. PPO operates by repeatedly collecting trajectories of interaction data from the environment, storing them in a rollout buffer, and then performing multiple epochs of minibatch optimization over that fixed dataset. Each interaction step produces a tuple \( (s_t, a_t, r_t, s_{t+1}) \), where the state \( s_t \) corresponds to the log₂-encoded 4×4 board, the action \( a_t \) is one of four discrete moves, and the reward \( r_t \) comes from merge scores and shaping bonuses.
+</p>
+
+<p>
+  The policy network outputs a probability distribution \( \pi_\theta(a \mid s) \), while a separate value network estimates \( V_\phi(s) \). PPO improves the policy by maximizing a clipped surrogate objective that prevents destructive policy updates:
+</p>
+
+<div class="formula-block">
+  \( L^{\text{PPO}}(\theta) =
+  \mathbb{E}_t \Big[
+    \min \Big(
+      r_t(\theta)\hat{A}_t,\;
+      \text{clip}(r_t(\theta), 1-\epsilon, 1+\epsilon)\hat{A}_t
+    \Big)
+  \Big] \)
+</div>
+
+<p>where</p>
+
+<div class="formula-block">
+  \( r_t(\theta) =
+  \frac{\pi_\theta(a_t \mid s_t)}
+       {\pi_{\theta_{\text{old}}}(a_t \mid s_t)} \)
+</div>
+
+<p>
+  and \( \hat{A}_t \) is the advantage estimate. The clipping term limits how far the policy can move during each update, preventing large shifts that could collapse previously learned behavior.
+</p>
+
+<p>
+  The value function is trained using a regression objective:
+</p>
+
+<div class="formula-block">
+  \( L^{\text{value}}(\phi) =
+  \mathbb{E}_t \Big[
+    (V_\phi(s_t) - \hat{R}_t)^2
+  \Big] \)
+</div>
+
+<p>
+  where \( \hat{R}_t \) represents the bootstrapped return. An entropy bonus is added to encourage exploration:
+</p>
+
+<div class="formula-block">
+  \( L^{\text{entropy}}(\theta) =
+  \mathbb{E}_t \big[
+    \mathcal{H}(\pi_\theta(\cdot \mid s_t))
+  \big] \)
+</div>
+
+<p>
+  The final optimization objective combines these components:
+</p>
+
+<div class="formula-block">
+  \( L =
+  L^{\text{PPO}}
+  - c_1 L^{\text{value}}
+  + c_2 L^{\text{entropy}} \)
+</div>
+
+<p>
+  Advantage estimation uses <strong>Generalized Advantage Estimation (GAE)</strong>, which balances bias and variance:
+</p>
+
+<div class="formula-block">
+  \( \hat{A}_t =
+  \sum_{l=0}^{\infty}
+  (\gamma \lambda)^l \delta_{t+l} \)
+  <br><br>
+  \( \delta_t =
+  r_t + \gamma V(s_{t+1}) - V(s_t) \)
+</div>
+
+<p>
+  This produces smoother gradients and more stable learning compared to single-step or Monte Carlo returns.
+</p>
+
+<p>
+  In the case of 2048, the observation space is a deterministic 4×4 grid whose tile magnitudes vary exponentially. Direct numerical input would create poorly scaled features, so the board is log₂-encoded, compressing tile values into a compact range. The encoded board is processed by a dual-path architecture: a CNN branch captures spatial structure (adjacency, merge opportunities, monotonic gradients), while a parallel MLP branch models global board statistics. These feature streams are concatenated and mapped to a four-action categorical distribution.
+</p>
+
+<p>
+  The reward function uses \( r = \log_2(\text{merge\_score} + 1) \), stabilizing gradient variance, and is augmented with shaping bonuses encouraging corner anchoring, monotonicity, and maintaining empty cells. These shaping signals accelerate learning by providing dense feedback without altering the optimal policy.
+</p>
+
+<p>
+  Training proceeds using large rollout batches (4096 steps per update), ensuring gradient estimates reflect diverse board configurations. The buffer is shuffled into minibatches and optimized over multiple epochs to improve sample efficiency. Separate Adam optimizers are used for policy and value networks, while a cosine annealing schedule gradually reduces step sizes. Gradient clipping (norm ≤ 0.5) prevents rare high-reward transitions from destabilizing updates.
+</p>
+
+<p>
+  A reproducible configuration specifies parameters such as discount factor \( \gamma \) (typically 0.99), GAE parameter \( \lambda \) (often 0.95), PPO clipping coefficient \( \epsilon \) (commonly 0.1–0.2), minibatch size, optimization epochs, entropy coefficient, and value loss weight. These defaults follow established PPO literature (Schulman et al., 2016; 2017).
+</p>
       <div class="sub-heading">Key Design Choices</div>
       <div class="design-grid">
 
