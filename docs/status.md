@@ -481,6 +481,26 @@ title: Status
 
   .video-link:hover { border-color: var(--accent); color: var(--accent); }
 
+  /* ── Video embed ── */
+  .video-wrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    margin-top: 20px;
+  }
+
+  .video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+
   /* ── Doc nav ── */
   .doc-nav {
     display: flex;
@@ -549,10 +569,30 @@ title: Status
     </div>
   </div>
 
-  <!-- DQN Approach -->
+  <!-- Video -->
   <div class="section">
     <div class="section-meta">
       <div class="section-num">02</div>
+      <h2 class="section-title">Video Submission</h2>
+    </div>
+    <div class="section-body">
+      <p>A walkthrough video covering our current progress, approach, and preliminary results.</p>
+      <div class="video-wrapper">
+        <iframe
+          src="https://www.youtube.com/embed/BgHOWQG5aYQ"
+          title="PowerOf2 — Status Video Submission"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- DQN Approach -->
+  <div class="section">
+    <div class="section-meta">
+      <div class="section-num">03</div>
       <h2 class="section-title">Approach — DQN</h2>
     </div>
     <div class="section-body">
@@ -601,7 +641,7 @@ title: Status
   <!-- PPO Approach -->
   <div class="section">
     <div class="section-meta">
-      <div class="section-num">03</div>
+      <div class="section-num">04</div>
       <h2 class="section-title">Approach — PPO</h2>
     </div>
     <div class="section-body">
@@ -779,7 +819,7 @@ L_value = 0.5 · E[ (Rᵢ − V_φ(sᵢ))² ]</div>
   <!-- Issues & Fixes -->
   <div class="section">
     <div class="section-meta">
-      <div class="section-num">04</div>
+      <div class="section-num">05</div>
       <h2 class="section-title">Issues &amp; Fixes</h2>
     </div>
     <div class="section-body">
@@ -836,7 +876,7 @@ L_value = 0.5 · E[ (Rᵢ − V_φ(sᵢ))² ]</div>
   <!-- Evaluation -->
   <div class="section">
     <div class="section-meta">
-      <div class="section-num">05</div>
+      <div class="section-num">06</div>
       <h2 class="section-title">Evaluation</h2>
     </div>
     <div class="section-body">
@@ -872,7 +912,7 @@ L_value = 0.5 · E[ (Rᵢ − V_φ(sᵢ))² ]</div>
   <!-- Remaining Goals -->
   <div class="section">
     <div class="section-meta">
-      <div class="section-num">06</div>
+      <div class="section-num">07</div>
       <h2 class="section-title">Remaining Goals</h2>
     </div>
     <div class="section-body">
@@ -917,22 +957,10 @@ L_value = 0.5 · E[ (Rᵢ − V_φ(sᵢ))² ]</div>
     </div>
   </div>
 
-  <!-- Video -->
-  <div class="section">
-    <div class="section-meta">
-      <div class="section-num">07</div>
-      <h2 class="section-title">Video Submission</h2>
-    </div>
-    <div class="section-body">
-      <p>A walkthrough video covering our current progress, approach, and preliminary results.</p>
-      <a href="link here" class="video-link">▶ Watch Video Submission ↗</a>
-    </div>
-  </div>
-
   <!-- Resources -->
   <div class="section">
     <div class="section-meta">
-      <div class="section-num">08</div>
+      <div class="section-num">09</div>
       <h2 class="section-title">Resources Used</h2>
     </div>
     <div class="section-body">
@@ -974,16 +1002,15 @@ L_value = 0.5 · E[ (Rᵢ − V_φ(sᵢ))² ]</div>
   <!-- AI Disclaimer -->
   <div class="section">
     <div class="section-meta">
-      <div class="section-num">09</div>
+      <div class="section-num">10</div>
       <h2 class="section-title">AI Disclaimer</h2>
     </div>
     <div class="section-body">
       <p>AI tooling was used in the following capacities:</p>
       <div class="ai-tags" style="margin-top: 16px;">
         <div class="ai-tag-item">Integrate libraries and dependencies</div>
-        <div class="ai-tag-item">Create frontend design for GitHub Pages and GUIs</div>
+        <div class="ai-tag-item">Create frontend design for GitHub Pages</div>
         <div class="ai-tag-item">Supplement personal learning of RL models</div>
-        <div class="ai-tag-item">Some writing, brainstorming, formatting equations</div>
       </div>
     </div>
   </div>
