@@ -40,6 +40,7 @@ We may later qualitatively evaluate how each model plays. That is, whether the m
 Some things we still need to implement are DQN wrappers, hyperparameter tuning, and visualizing results. We need to fix DQN to avoid illegal moves and tune both models. Once we have finished with those, we will work on visualizing our results in graphs/charts.
 
 ## Video Link
+[Video Submission](link here)
 
 ## Resources Used
 - [2048 GitHub Repository](https://github.com/Quentin18/gymnasium-2048/blob/main/README.md)
