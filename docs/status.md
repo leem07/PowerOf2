@@ -7,14 +7,14 @@ title: Status
   @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap');
 
   :root {
-    --bg: #0a0a0a;
-    --surface: #111111;
-    --border: #1f1f1f;
-    --accent: #e8c547;
-    --accent2: #e87d47;
-    --accent3: #47b5e8;
-    --text: #e8e8e0;
-    --muted: #666660;
+    --bg: #f5f4ef;
+    --surface: #eceae2;
+    --border: #d8d5c8;
+    --accent: #b8860b;
+    --accent2: #c4521a;
+    --accent3: #1a6fa8;
+    --text: #1a1a16;
+    --muted: #7a7a72;
   }
 
   body {
@@ -43,7 +43,7 @@ title: Status
     font-size: clamp(80px, 12vw, 180px);
     font-weight: 700;
     color: transparent;
-    -webkit-text-stroke: 1px #1a1a1a;
+    -webkit-text-stroke: 1px #c8c5b8;
     pointer-events: none;
     user-select: none;
     line-height: 1;
@@ -134,7 +134,7 @@ title: Status
   .section-body {
     font-size: 15px;
     line-height: 1.85;
-    color: #a0a099;
+    color: #4a4a44;
   }
 
   .section-body p { margin: 0 0 20px 0; }
@@ -307,7 +307,7 @@ title: Status
 
   .bug-fix p {
     font-size: 13px;
-    color: #a0a099;
+    color: #4a4a44;
     line-height: 1.7;
     margin: 0;
   }
@@ -339,7 +339,7 @@ title: Status
     letter-spacing: 0.15em;
     text-transform: uppercase;
     color: var(--accent);
-    background: rgba(10,10,10,0.88);
+    background: rgba(245,244,239,0.92);
     padding: 6px 10px;
     z-index: 2;
   }
@@ -395,7 +395,7 @@ title: Status
     align-items: center;
     gap: 16px;
     font-size: 14px;
-    color: #a0a099;
+    color: #4a4a44;
     line-height: 1.6;
   }
 
@@ -449,7 +449,7 @@ title: Status
     background: var(--surface);
     padding: 16px 24px;
     font-size: 14px;
-    color: #a0a099;
+    color: #4a4a44;
     display: flex;
     align-items: center;
     gap: 12px;
@@ -512,7 +512,7 @@ title: Status
     font-size: 10px;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: #333;
+    color: #aaa9a0;
   }
 
   @media (max-width: 768px) {
