@@ -54,8 +54,8 @@ title: Home
 
   .hero-tag {
     font-family: 'Space Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 0.25em;
+    font-size: 13px;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
     color: var(--accent);
     margin-bottom: 24px;
@@ -156,8 +156,8 @@ title: Home
 
   .board-label {
     font-family: 'Space Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 0.2em;
+    font-size: 13px;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
     color: var(--muted);
     margin-bottom: 20px;
@@ -236,7 +236,7 @@ title: Home
   }
 
   .stat-label {
-    font-size: 11px;
+    font-size: 13px;
     letter-spacing: 0.15em;
     text-transform: uppercase;
     color: var(--muted);
@@ -264,7 +264,7 @@ title: Home
 
   .section-header span {
     font-family: 'Space Mono', monospace;
-    font-size: 11px;
+    font-size: 13px;
     color: var(--muted);
     letter-spacing: 0.2em;
     text-transform: uppercase;
@@ -299,7 +299,7 @@ title: Home
 
   .report-num {
     font-family: 'Space Mono', monospace;
-    font-size: 11px;
+    font-size: 13px;
     color: var(--muted);
     letter-spacing: 0.2em;
   }
@@ -339,7 +339,7 @@ title: Home
     border-bottom: 1px solid var(--border);
     text-decoration: none;
     color: var(--muted);
-    font-size: 14px;
+    font-size: 16px;
     transition: color 0.2s;
     gap: 20px;
   }
@@ -362,7 +362,7 @@ title: Home
 
   .ref-url {
     font-family: 'Space Mono', monospace;
-    font-size: 11px;
+    font-size: 13px;
     color: var(--muted);
     flex: 1;
     overflow: hidden;
@@ -395,7 +395,7 @@ title: Home
   }
 
   .github-icon {
-    font-size: 22px;
+    font-size: 26px;
   }
 
   .source-label {
