@@ -10,7 +10,7 @@ In this project, we train three different models using three different approache
 ### DQN
 One of the models we are training is Deep Q Learning (DQN) that uses a Multilayer Perceptron policy. This takes uses board states as input/output and makes actions (0-4, corresponding to left, right, up, and down) based on rewards (total_score). 
 
-The loss function for DQN is $$L(\theta) = \mathbb{E}_{(s, a, r, s') \sim U(D)} \left[ \left( y - Q(s, a; \theta) \right)^2 \right]$$ where y is $$y = r + \gamma \max_{a'} Q(s', a'; \theta^-)$$
+The loss function for DQN is $$L(\theta) = \mathbb{E}_{(s, a, r, s') \sim U(D)} \left[ \left( y - Q(s, a; \theta) \right)^2 \right]$$ where $$y = r + \gamma \max_{a'} Q(s', a'; \theta^-)$$
 
 The base code for the 2048 game uses random moves without any learning. We used the Stable Baselines3 DQN enviromment to train a model on 2048. The hyperparameters for the MLP DQN model were:
 - learning_rate=1e-2
