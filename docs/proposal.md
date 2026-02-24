@@ -42,7 +42,7 @@ title: Proposal
     font-size: clamp(80px, 12vw, 180px);
     font-weight: 700;
     color: transparent;
-    -webkit-text-stroke: 1px #1a1a1a;
+    -webkit-text-stroke: 1px #c8c5b8;
     pointer-events: none;
     user-select: none;
     line-height: 1;
@@ -143,7 +143,7 @@ title: Proposal
   .section-body {
     font-size: 15px;
     line-height: 1.85;
-    color: #a0a099;
+    color: #4a4a44;
   }
 
   .section-body p {
@@ -213,7 +213,7 @@ title: Proposal
   .goal-desc {
     font-size: 14px;
     line-height: 1.75;
-    color: #a0a099;
+    color: #4a4a44;
     padding-top: 4px;
   }
 
@@ -243,7 +243,7 @@ title: Proposal
   .metric-card p {
     font-size: 14px;
     line-height: 1.7;
-    color: #a0a099;
+    color: #4a4a44;
     margin: 0;
   }
 
@@ -296,7 +296,7 @@ title: Proposal
     font-size: 10px;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: #333;
+    color: #aaa9a0;
   }
 
   @media (max-width: 768px) {
