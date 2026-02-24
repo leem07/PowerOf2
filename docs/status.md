@@ -52,8 +52,8 @@ title: Status
 
   .breadcrumb {
     font-family: 'Space Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 0.25em;
+    font-size: 13px;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
     color: var(--muted);
     margin-bottom: 24px;
@@ -75,7 +75,7 @@ title: Status
   }
 
   .page-header p {
-    font-size: 16px;
+    font-size: 18px;
     color: var(--muted);
     max-width: 560px;
     line-height: 1.7;
@@ -104,8 +104,8 @@ title: Status
 
   .section-num {
     font-family: 'Space Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 0.25em;
+    font-size: 13px;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
     color: var(--accent);
     margin-bottom: 12px;
@@ -123,7 +123,7 @@ title: Status
   }
 
   .section-title {
-    font-size: 22px;
+    font-size: 26px;
     font-weight: 800;
     letter-spacing: -0.01em;
     line-height: 1.2;
@@ -132,8 +132,8 @@ title: Status
   }
 
   .section-body {
-    font-size: 15px;
-    line-height: 1.85;
+    font-size: 17px;
+    line-height: 1.9;
     color: #4a4a44;
   }
 
@@ -144,8 +144,8 @@ title: Status
   /* ── Sub-heading ── */
   .sub-heading {
     font-family: 'Space Mono', monospace;
-    font-size: 11px;
-    letter-spacing: 0.2em;
+    font-size: 13px;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
     color: var(--accent);
     margin: 32px 0 16px;
@@ -181,7 +181,7 @@ title: Status
 
   .design-icon {
     font-family: 'Space Mono', monospace;
-    font-size: 11px;
+    font-size: 13px;
     color: var(--accent);
     padding-top: 3px;
   }
@@ -189,7 +189,7 @@ title: Status
   .design-content {}
 
   .design-title {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 700;
     color: var(--text);
     margin: 0 0 6px 0;
@@ -197,9 +197,9 @@ title: Status
   }
 
   .design-desc {
-    font-size: 13px;
+    font-size: 15px;
     color: var(--muted);
-    line-height: 1.7;
+    line-height: 1.75;
     margin: 0;
   }
 
@@ -211,7 +211,7 @@ title: Status
     padding: 20px 24px;
     margin: 20px 0;
     font-family: 'Space Mono', monospace;
-    font-size: 13px;
+    font-size: 15px;
     color: var(--text);
     overflow-x: auto;
   }
@@ -236,13 +236,13 @@ title: Status
 
   .hyperparam-key {
     font-family: 'Space Mono', monospace;
-    font-size: 12px;
+    font-size: 14px;
     color: var(--muted);
   }
 
   .hyperparam-val {
     font-family: 'Space Mono', monospace;
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 700;
     color: var(--accent);
   }
@@ -284,16 +284,16 @@ title: Status
   .bug-tag.fix    { color: #5ec47a;        border-color: #5ec47a; }
 
   .bug-title {
-    font-size: 15px;
+    font-size: 17px;
     font-weight: 700;
     color: var(--text);
     line-height: 1.4;
   }
 
   .bug-body {
-    font-size: 13px;
+    font-size: 15px;
     color: var(--muted);
-    line-height: 1.75;
+    line-height: 1.8;
   }
 
   .bug-fix {
@@ -374,7 +374,7 @@ title: Status
   }
 
   .stat-label {
-    font-size: 11px;
+    font-size: 13px;
     letter-spacing: 0.15em;
     text-transform: uppercase;
     color: var(--muted);
@@ -394,7 +394,7 @@ title: Status
     display: flex;
     align-items: center;
     gap: 16px;
-    font-size: 14px;
+    font-size: 16px;
     color: #4a4a44;
     line-height: 1.6;
   }
@@ -425,7 +425,7 @@ title: Status
     border-bottom: 1px solid var(--border);
     text-decoration: none;
     color: var(--muted);
-    font-size: 14px;
+    font-size: 16px;
     transition: color 0.2s;
     gap: 20px;
   }
@@ -448,7 +448,7 @@ title: Status
   .ai-tag-item {
     background: var(--surface);
     padding: 16px 24px;
-    font-size: 14px;
+    font-size: 16px;
     color: #4a4a44;
     display: flex;
     align-items: center;
@@ -494,7 +494,7 @@ title: Status
 
   .doc-nav a {
     font-family: 'Space Mono', monospace;
-    font-size: 11px;
+    font-size: 13px;
     letter-spacing: 0.15em;
     text-transform: uppercase;
     color: var(--muted);
