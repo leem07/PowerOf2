@@ -46,7 +46,7 @@ title: Home
     font-size: clamp(160px, 22vw, 320px);
     font-weight: 700;
     color: transparent;
-    -webkit-text-stroke: 1px #1e1e1e;
+    -webkit-text-stroke: 1px #c8c5b8;
     pointer-events: none;
     user-select: none;
     line-height: 1;
@@ -186,7 +186,7 @@ title: Home
     letter-spacing: 0.15em;
     text-transform: uppercase;
     color: var(--accent);
-    background: rgba(10,10,10,0.85);
+    background: rgba(245,244,239,0.92);
     padding: 6px 10px;
     z-index: 2;
   }
