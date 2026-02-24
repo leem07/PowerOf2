@@ -27,8 +27,12 @@ Unfortunately, with the default DQN environment, the model does not learn to avo
 ### PPO
 
 ## Evaluation
+### DQN
+
+### PPO
 
 ## Remaining Goals and Challenges
+Some things we still need to implement are DQN wrappers, hyperparameter tuning, and visualizing results. We need to fix DQN to avoid illegal moves and tune both models. Once we have finished with those, we will work on visualizing our results in graphs/charts.
 
 ## Resources Used
 - [2048 GitHub Repository](https://github.com/Quentin18/gymnasium-2048/blob/main/README.md)
