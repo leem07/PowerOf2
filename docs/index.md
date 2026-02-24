@@ -14,6 +14,7 @@ Reports:
 
 
 References Used:
+- [2048 GitHub Repository](https://github.com/Quentin18/gymnasium-2048/blob/main/README.md)
 - [Stable Baselines3 DQN](https://stable-baselines3.readthedocs.io/en/master/modules/dqn.html)
 - [DeepMind Technologies DQN Paper](https://arxiv.org/pdf/1312.5602)
 - [Stanford 2048 Paper](https://arxiv.org/html/2507.05465v1)
