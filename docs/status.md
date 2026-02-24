@@ -31,6 +31,9 @@ Unfortunately, with the default DQN environment, the model does not learn to avo
 Evaluation:
 We are using two main statistics for evaluation--the total score and the maximum tile value for each game.  We will compare how well each model objectively performed in 2048 based on the scores they reach. Here is a figure of the PPO model:
 ![PPO512](./PPO512.png)
+This has a total score of 4456 and a maximum tile of 512.
+
+We may later qualitatively evaluate how each model plays. That is, whether the models push higher numbers to one side, whether they create diagonals or snakes, whether they make many illegal moves, etc.
 
 ## Remaining Goals and Challenges
 Some things we still need to implement are DQN wrappers, hyperparameter tuning, and visualizing results. We need to fix DQN to avoid illegal moves and tune both models. Once we have finished with those, we will work on visualizing our results in graphs/charts.
