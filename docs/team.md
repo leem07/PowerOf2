@@ -3,8 +3,7 @@ layout: default
 title:  Team
 ---
 
-# {{ DuckieDontCrash Team }}
-
+# Power of Three
 
 ## Amy Lee
 ***UCI Net ID***: leeat5
