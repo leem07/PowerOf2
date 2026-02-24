@@ -7,14 +7,14 @@ title: Home
   @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap');
 
   :root {
-    --bg: #0a0a0a;
-    --surface: #111111;
-    --border: #1f1f1f;
-    --accent: #e8c547;
-    --accent2: #e87d47;
-    --text: #e8e8e0;
-    --muted: #666660;
-    --tile: #1a1a1a;
+    --bg: #f5f4ef;
+    --surface: #eceae2;
+    --border: #d8d5c8;
+    --accent: #b8860b;
+    --accent2: #c4521a;
+    --accent3: #1a6fa8;
+    --text: #1a1a16;
+    --muted: #7a7a72;
   }
 
   body {
