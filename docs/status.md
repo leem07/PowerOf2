@@ -981,8 +981,9 @@ L_value = 0.5 · E[ (Rᵢ − V_φ(sᵢ))² ]</div>
       <p>AI tooling was used in the following capacities:</p>
       <div class="ai-tags" style="margin-top: 16px;">
         <div class="ai-tag-item">Integrate libraries and dependencies</div>
-        <div class="ai-tag-item">Create frontend design for GitHub Pages</div>
+        <div class="ai-tag-item">Create frontend design for GitHub Pages and GUIs</div>
         <div class="ai-tag-item">Supplement personal learning of RL models</div>
+        <div class="ai-tag-item">Some writing, brainstorming, formatting equations</div>
       </div>
     </div>
   </div>
