@@ -37,7 +37,7 @@ Evaluated across 20-game standardized benchmarks measuring **2048 tile reach rat
 ### 2. Scale-Invariant Reward Function
 To align short-term feedback with long-horizon merge chains without reward hacking:
 
-$$r_t = \log_2(\text{merge\_score} + 1) + 0.30 \cdot \log_2(\text{max\_tile} + 1) \cdot \mathbb{I}[\text{max\_tile in corner}] + 0.10 \cdot N_{\text{empty}} - 0.05 \cdot P_{\text{mono}}$$
+$$r_t = \log_2(\text{merge score} + 1) + 0.30 \cdot \log_2(\text{max tile} + 1) \cdot \mathbb{I}[\text{max tile in corner}] + 0.10 \cdot N_{\text{empty}} - 0.05 \cdot P_{\text{mono}}$$
 
 * **Logarithmic Merge Base:** Merging two `512` tiles ($\log_2(1025) \approx 10$) vs. two `2` tiles ($\log_2(5) \approx 2.3$) keeps gradient magnitudes bounded across early and late game stages.
 * **Corner Anchoring (`+0.30`):** Rewards keeping the highest tile stationary in a corner to enable descending snake-chain collapses.
